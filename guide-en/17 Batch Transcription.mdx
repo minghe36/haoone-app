@@ -1,0 +1,271 @@
+---
+title: "17 Batch Transcription"
+---
+
+Batch transcription is used to process multiple media files in a project at once. The system will transcribe them sequentially and automatically write results back to the current project.
+
+Can only use local models. Translation must use custom LLM API.
+
+Batch transcription does not affect subtitle editing operations. The entire process is asynchronous, but do not close the haoone program.
+
+## I. Feature Entry
+
+The batch transcription entry is located in the media import area on the left or bottom of the project page.
+
+Usage:
+
+1. First import the audio or video to be processed into the current project
+2. Select 2 or more files in the media list. You can use Cmd+A to select all. The shortcut keys are consistent with DaVinci Resolve
+3. Click `Batch Transcription` at the bottom
+4. Confirm parameters in the popup settings window, then click `Start Transcription`
+
+Description:
+
+- The `Batch Transcription` button only appears as a batch operation when you have selected multiple media files
+
+## II. Preparation Before Use
+
+Please confirm the following conditions before starting:
+
+### 1. Project Created and Entered
+
+Batch transcription relies on the current project name and project directory to save results, so operations must be performed within a project.
+
+### 2. Media Imported for Processing
+
+Supports batch processing of imported media in the project:
+
+- Video files: Will use the corresponding audio track for transcription
+- Audio files: Directly use the original audio for transcription
+
+### 3. Local Transcription Model Downloaded
+
+Batch transcription uses local offline models for execution. If the model selected in the popup has not been downloaded, the system will prompt you to download the model first.
+
+### 4. For Batch Translation, Custom LLM API Must Be Configured First
+
+When you want to use the following capabilities, you need to complete custom LLM API configuration in the software first:
+
+- `Bilingual Mode`
+- `Translation Mode`
+
+If not configured, custom translation-related options will be disabled and display a prompt.
+
+## III. Detailed Operation Steps
+
+### Step 1: Import Media Files
+
+Import the audio or video to be processed into the current project. After import is complete, these files will appear in the media list.
+
+### Step 2: Select Files for Batch Transcription
+
+Select multiple files in the media list.
+
+You can use the following methods:
+
+- Click individually to select target files
+- Use `Cmd + A` or `Ctrl + A` to select all media in the current list
+
+After selection, the bottom will display the number of selected files.
+
+### Step 3: Open Batch Transcription Window
+
+Click the `Batch Transcription` button at the bottom to open the settings popup.
+
+### Step 4: Set Transcription Parameters
+
+The following parameters can be set in the popup.
+
+#### 1. Local Model
+
+Used to control the offline recognition model used for batch transcription.
+
+Note:
+
+- Can only select models already downloaded on this machine
+- If the default model is not downloaded, the system will automatically allow you to switch to other downloaded models
+
+#### 2. Language
+
+Currently only supports Chinese and English.
+
+#### 3. Translation Mode
+
+Options are as follows:
+
+- `No Translation`: Only generate original language subtitles
+- `Bilingual Mode`: Generate bilingual subtitles
+- `Translation Mode`: Translate subtitles to target language
+
+Description:
+
+- Batch translation relies on custom LLM API
+- When API is not configured, only `No Translation` can be used
+
+#### 4. Bilingual Language
+
+When translation mode selects `Bilingual Mode`, you need to specify:
+
+- `Top Language`
+- `Bottom Language`
+
+Common usage:
+
+- Top Chinese, Bottom English
+- Top English, Bottom Chinese
+
+This will ultimately generate a bilingual primary subtitle, and additionally export separate files for top and bottom lines.
+
+#### 5. Target Language
+
+When translation mode selects `Translation Mode`, you need to specify the target language, for example:
+
+- English
+- Japanese
+- Korean
+- French
+
+#### 6. Maximum Single Line Subtitle Length
+
+Used to control the split length of individual subtitles. The current configurable range is `14` to `30`.
+
+Recommendations:
+
+- For spoken content with many short sentences: Can be set smaller
+- For speeches, courses with longer sentences: Can be set larger
+
+#### 7. AI Smart Line Splitting
+
+This toggle controls the smart line splitting preference during batch transcription.
+
+Recommendations:
+
+- Can be enabled when you want to retain more detailed line splitting control
+- If results don't differ significantly from expectations, can be adjusted together with `Maximum Single Line Subtitle Length`
+
+### Step 5: Start Transcription
+
+After clicking `Start Transcription`, the system will process selected files sequentially.
+
+During processing:
+
+- The bottom status bar will display overall progress, e.g., "File 2/5"
+- Current file cards will display stage and percentage
+- Completed files will automatically write subtitle results back to the project
+
+### Step 6: View Results
+
+After the batch task completes, each successfully processed file will receive corresponding subtitle data in the project, and you can directly continue to:
+
+- Check recognition results
+- Load into timeline for continued editing
+- Perform subsequent batch burning
+
+## IV. Output Results Description
+
+Batch transcription output directory is consistent with single-file transcription, uniformly writing to the `transcriptions` directory under the current project.
+
+Directory example:
+
+```text
+Your Project Directory/
+  Project Name/
+    transcriptions/
+```
+
+### 1. No Translation
+
+Each successful file will generate:
+
+- `Filename.srt`
+- `Filename.json`
+
+Where:
+
+- `srt` is the subtitle file
+- `json` is the structured segmentation result, containing time periods and text content
+
+### 2. Bilingual Mode
+
+Each successful file typically generates:
+
+- `Filename.srt`
+- `Filename.json`
+- `Filename_1.srt`
+- `Filename_1.json`
+- `Filename_2.srt`
+- `Filename_2.json`
+
+Meanings are as follows:
+
+- `Filename.srt / json`: Bilingual merged primary result
+- `Filename_1.*`: Top language result
+- `Filename_2.*`: Bottom language result
+
+### 3. Translation Mode
+
+Each successful file will generate:
+
+- `Filename.srt`
+- `Filename.json`
+
+At this time, the main file saves the translated subtitle result.
+
+## V. Status Description During Batch Transcription
+
+Common statuses during task execution include:
+
+- `Preparing`: Task just started, initializing
+- `Transcribing`: Currently processing file
+- `Complete`: Current file completed
+- `Failed`: Current file processing failed
+- `All Complete`: Entire batch task processing ended
+
+Description:
+
+- Even if a file fails, subsequent files will continue processing
+- After the batch task ends, you can retry problematic files individually based on failure prompts
+
+## VI. Abort Mechanism Description
+
+When batch transcription is running, the bottom button will change to `Abort Transcription`.
+
+After clicking, the system will stop the current batch task and no longer continue with subsequent files.
+
+Please note:
+
+- Already completed file results will be preserved
+- Currently executing files may abort mid-processing
+- Files not yet started will not continue execution
+
+If you want to continue processing remaining files, it is recommended to re-select unfinished files and initiate batch transcription again.
+
+## VII. Non-Paying User Restrictions
+
+In the current version, non-paying users have the following restrictions:
+
+### 1. File Count Limit
+
+A maximum of `5` files can be processed in one batch transcription.
+
+If exceeded, the system will prompt:
+
+```text
+Batch import file count exceeds 5, please purchase the software first
+```
+
+### 2. Single File Duration Limit
+
+Non-paying users will have files exceeding `20 minutes` automatically skipped during batch transcription and marked as failed.
+
+Typical prompt:
+
+```text
+Non-paying user skipping transcription for files exceeding 20 minutes, please purchase the software first
+```
+
+After purchase:
+
+- No limit on batch file count
+- No limit on file duration
+- Can use custom LLM API

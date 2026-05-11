@@ -1,0 +1,95 @@
+---
+title: "3.2 Install and Use PR Plugin"
+---
+
+haoone provides a PR integration plugin that enables you to perform one-click transcription directly within Premiere Pro. No need to export audio or switch applications to complete the entire transcription workflow.
+
+Note: Currently on Windows, the haoone GUI interface may appear (unresponsive) when executing the plugin. This is normal; manually switch back to the PR interface.
+
+## Install Plugin
+
+The plugin installation has been simplified as much as possible. Just click two buttons.
+
+![#w400](../image/pr-1.png)
+![#w400](../image/pr-2.png)
+
+You can open the plugin directory to confirm if the com.haoone directory exists.
+
+![#w400](../image/pr-4.png)
+
+Make sure to enable PR's debug mode, otherwise the plugin won't be visible in PR.
+
+![#w400](../image/pr-3.png)
+
+After successful startup, restart PR and you will see the extension:
+
+![#w400](../image/pr-5.png)
+
+If startup fails, please refer to the manual activation method below:
+
+## Manually Enable Debug Mode
+
+If you have AI coding tools like Claude Code, you can ask them to help you set this up.
+
+### Mac System
+
+Open Terminal and run the following command:
+
+```bash
+# Write debug mode setting
+defaults write com.adobe.PrPro "PlayerDebugMode" -bool true
+```
+
+### Windows System
+
+
+1. Press `Win + R` to open the Run dialog
+2. Type `regedit` and press Enter to open Registry Editor
+3. Navigate to: `HKEY_CURRENT_USER\Software\Adobe\Premiere Pro\Settings`
+4. Right-click in the blank area on the right → New → DWORD Value
+5. Name it: `PlayerDebugMode`
+6. Double-click to set the value data to: `1`
+
+## Execute Transcription
+
+Select remote transcription or local transcription, click Generate Subtitles
+
+![#w400](../image/pr-6.png)
+
+After transcription completes, an SRT file will be generated:
+
+![#w400](../image/pr-7.png)
+
+The file will be automatically imported into the Project panel
+
+![#w400](../image/pr-8.png)
+
+Drag the file into the sequence (timeline):
+
+![#w400](../image/pr-9.png)
+
+Subtitle insertion complete!
+
+![#w400](../image/pr-10.png)
+
+## Sync Modifications from haoone Software
+
+It is highly recommended to open haoone to edit subtitles, where you can perform manuscript matching, translation, and other operations.
+
+Open haoone software, execute translation:
+
+![#w400](../image/pr-11.png)
+
+![#w400](../image/pr-12.png)
+
+Sync modifications from haoone software:
+
+![#w400](../image/pr-13.png)
+
+A new SRT file will be generated:
+
+![#w400](../image/pr-14.png)
+
+Import it into the sequence:
+
+![#w600](../image/pr-15.png)

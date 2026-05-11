@@ -1,0 +1,103 @@
+---
+title: "8 Remote Transcription Tutorial"
+---
+
+If local transcription is unavailable or your computer has poor performance, you can use the remote transcription feature.
+
+Remote transcription uploads audio to the server (periodically deleted). Please use local transcription if you need data privacy.
+
+haoone's remote transcription speed is very fast. A 30-minute video can complete transcription within 5 minutes, and subtitles achieve high-precision word-level alignment with audio.
+
+Remote transcription supports up to 45 minutes per single video transcription. 3 minutes counts as one AI call.
+
+Upgraded remote transcription model language support, now supports Chinese (including 20+ common dialects), English, Japanese, Korean, German, French, Spanish, Italian, Portuguese, Russian
+
+DaVinci Resolve plugin supports setting timeline in/out points for partial transcription.
+
+---
+
+## Install Subtitle and Audio Alignment Model
+
+For first-time use, you must install the subtitle and audio alignment model, otherwise it won't work.
+
+haoone has made many optimizations for word-level timestamp alignment in Chinese scenarios.
+
+![#w600](../image/iShot_2026-01-18_15.43.12.png)
+![#w400](../image/iShot_2026-01-18_15.43.26.png)
+
+## Use Remote Transcription in Software
+
+
+1. **Open haoone and Import Media Files**
+   - Click **New Project** or open an existing project
+   - Click **Import Media** and select video/audio files
+   - Wait for import to complete
+
+2. **Select Online Transcription**
+   - Click **Transcribe** button
+   - Select **Online Transcription** in the dialog (instead of local transcription)
+
+3. **Configure Transcription Settings**
+   - Select language
+   - Subtitle length
+
+4. **Start Transcription**
+   - Click **Start Transcription** button
+   - System displays progress bar
+
+5. **Wait for Completion**
+   - Transcription process typically takes 2-10 minutes (depending on audio length)
+   - Shows detailed progress (compression, upload, transcription, etc.)
+   - You will see subtitles after completion
+
+ ![#w300](../image/iShot_2026-01-08_15.42.09.png)  
+ ![#w300](../image/iShot_2026-01-08_15.42.25.png)
+
+ Remote transcription has no model size selection option, uses the largest model by default.
+
+### Use Remote Transcription in Plugin
+
+Very simple, just check Remote Transcription:
+
+ ![#w300](../image/iShot_2026-01-08_15.44.18.png)
+
+## Transcription Settings Description
+
+### Language Selection
+
+**Supported Languages:**
+
+haoone online transcription supports 60+ languages.
+
+**Select Language:**
+
+1. Find the **Language** option in transcription settings
+2. Click the dropdown menu
+3. Select the audio's language
+4. Language selection affects transcription accuracy
+
+**Note:**
+- Selecting the **wrong language** will result in transcription failure or very low accuracy
+- Multi-language mixed audio will be recognized as the primary language
+
+#### Maximum Line Length
+
+Set the maximum character count per subtitle line. Not recommended to set below 8.
+
+
+### Enable AI Correction and Line Splitting
+
+Enabled by default, recommended to keep enabled, especially when subtitle length settings are small. AI will achieve semantic line splitting.
+
+
+## Use Remote Transcription in DaVinci Resolve Plugin
+
+Just check Enable Remote Transcription:
+
+![#w600](../image/iShot_2026-01-09_12.46.26.png)
+
+The software will remember your selection.
+
+### Partial Transcription
+
+Use I O on the timeline to set in/out points to transcribe only the video subtitles within the I O range.

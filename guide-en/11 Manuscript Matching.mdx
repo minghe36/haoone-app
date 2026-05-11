@@ -1,0 +1,61 @@
+---
+title: "11 Use Manuscript Matching"
+---
+
+
+If you already have a text manuscript, it is highly recommended to use the manuscript matching feature.
+
+The software's AI capability automatically structures the manuscript, splits lines, and cleans up irrelevant content (such as script instructions, notes, headings, etc.), without requiring manual processing.
+
+Manuscript matching must be performed after transcription, and does not support subtitles not transcribed by haoone.
+
+No word limit, supports whether line splitting follows the manuscript.
+
+## Use Manuscript Matching in Software
+
+<video src="https://cdn.haoai.pro/assets/hao-one/4.mp4" controls />
+
+## Workflow Description
+
+```
+  After Transcription Subtitle Generated Successfully
+         ↓
+  Click Manuscript Matching Button
+         ↓
+  Copy Manuscript Content to Input Box
+         ↓
+  Run
+```
+
+![#w300](../image/iShot_2026-01-09_12.05.49.png)
+![#w600](../image/iShot_2026-01-09_12.07.25.png)
+
+
+## Use Manuscript Matching in DaVinci Resolve Plugin
+
+```
+  Open Timeline
+         ↓
+  Run haoone Plugin
+         ↓
+  Run Transcription to Generate Subtitles
+         ↓
+  Click Manuscript Matching Button
+         ↓
+  Copy Manuscript Content to Input Box
+         ↓
+  Run
+```
+
+Open the haoone plugin in DaVinci Resolve, first execute transcription. You can choose local transcription or remote transcription as needed.
+
+After transcription completes, click manuscript matching, input the manuscript. The plugin has no word limit, and additionally includes a manuscript formatting feature. After execution, it will automatically split lines and clean up note content.
+
+Check "Line Splitting Follows Manuscript" then start matching. The logic is the same as JianYing. The algorithm will re-split the transcribed subtitles according to the manuscript. Matching speed is very fast.
+
+If the manuscript is missing sentences, the algorithm has intelligent adaptation, which has no impact.
+
+If you uncheck "Line Splitting Follows Manuscript" and then execute matching, it enables the manuscript error correction subtitle mode. You can use the manuscript to correct transcribed subtitles without changing the existing subtitle line splitting.
+
+![#w600](../image/iShot_2026-01-09_12.09.29.png)
+![#w600](../image/iShot_2026-01-09_12.10.16.png)

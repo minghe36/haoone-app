@@ -1,0 +1,85 @@
+---
+title: "7 Local Transcription"
+---
+
+Unlike many other subtitle software, haoone does not use Whisper. Whisper's Chinese recognition accuracy is mediocre and prone to hallucinations.
+
+In 2026, haoone's local model has been upgraded to qwen3-asr (thanks to Alibaba for open-sourcing such an excellent ASR model). The alignment algorithm is self-developed, achieving 95% accuracy in Chinese and English recognition. It can recognize songs and regional dialects, and subtitles can be aligned with audio at word-level high precision.
+
+Local transcription requires you to install models first. Please refer to the [model installation tutorial](./4 Model Download and Management).
+
+Free users can transcribe audio/video files up to 20 minutes unlimited times.
+
+Both Windows and Mac have automatically enabled GPU acceleration, no complex setup required, ready to use out of the box. Windows requires the computer to have a graphics card, especially NVIDIA graphics cards.
+
+haoone local transcription is very fast. For a 3-minute audio file, Mac M4 Max can complete transcription within 30 seconds, Windows i5 with 5060 graphics card can complete transcription in 2 minutes.
+
+Local models are specifically optimized for long audio, with no limits on transcription duration or usage count.
+
+Compared to remote transcription, local models have approximately 1%-3% lower recognition accuracy for Chinese and English, very close.
+
+DaVinci Resolve plugin supports setting timeline in/out points for partial transcription.
+
+<video src="https://cdn.haoai.pro/assets/hao-one/9.mp4" controls />
+
+
+## Use Local Transcription in Software
+
+![#w600](../image/iShot_2026-01-09_12.53.27.png)
+
+![#w600](../image/iShot_2026-01-09_12.53.47.png)
+
+## Transcription Settings Description
+
+### Language Selection
+
+**Supported Languages:**
+
+Currently only supports Chinese and English.
+
+**Select Language:**
+
+1. Find the **Language** option in transcription settings
+2. Click the dropdown menu
+3. Select the audio's language
+4. Language selection affects transcription accuracy
+
+**Note:**
+- Selecting the **wrong language** will result in transcription failure or very low accuracy
+- Multi-language mixed audio will be recognized as the primary language
+
+#### Maximum Line Length
+
+Set the maximum character count per subtitle line. Not recommended to set below 8.
+
+
+### Enable AI Correction and Line Splitting
+
+Enabled by default, recommended to keep enabled, especially when subtitle length settings are small. AI will achieve semantic line splitting.
+
+AI Correction allows you to customize correction prompts in the settings page. Different languages can have different prompts.
+
+
+## Use Local Transcription in DaVinci Resolve Plugin
+
+<video src="https://cdn.haoai.pro/assets/hao-one/1.mov" controls />
+
+
+In DaVinci Resolve, click menu "Workspace", click "Scripts", select haoone, and the plugin interface will appear.
+
+![#w100](../image/iShot_2026-01-09_12.57.46.png)
+
+![#w600](../image/iShot_2026-01-09_12.56.47.png)
+
+### Subtitle Track
+
+You can specify which subtitle track to place subtitles on
+
+### Disable Background Music
+
+It's best to disable BGM if background music is present.
+
+### Partial Transcription
+
+Use I O on the timeline to set in/out points to transcribe only the video subtitles within the I O range.
+

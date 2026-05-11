@@ -1,0 +1,254 @@
+---
+title: "16 Burn Subtitles and Batch Burn"
+---
+
+## 1. Feature Description
+
+Burn the subtitles corresponding to the current media file directly into the video frame, outputting a new video file with subtitles. The output codec is H.264. Mainly used for batch video processing.
+
+The burn feature works normally for free users.
+
+## 2. Preparation Before Use
+
+Before starting the burn process, please confirm the following conditions are met:
+
+- The current project already has an available video file (video only)
+- Subtitles have been generated for the corresponding video
+- Subtitle timeline has been proofread to avoid subtitle misalignment after export
+- Confirmed in the player area that the subtitle style meets expectations
+
+## 3. Single Video Burn
+
+### 3.1 Feature Entry
+
+Click in the top operation area of the project:
+
+`Burn`
+
+The system will open the "Burn Subtitles to Video" window.
+
+### 3.2 Workflow Logic Before Burning
+
+Single burn will use the media file currently being processed in the project.
+
+If there are no videos available for burning in the current project, the system will prompt:
+
+`No video files available for burning subtitles in the current project`
+
+### 3.3 Window Field Description
+
+The "Burn Subtitles to Video" window mainly contains the following content:
+
+#### Output Directory
+
+Used to specify the save location for the exported video.
+
+- If you configured a default export directory in software settings, it will preferentially use the default directory
+- If no default export directory is configured, it typically defaults to the current project directory
+- Can be manually entered
+- Can also click the folder button on the right to select a directory
+
+#### Output Filename
+
+Used to specify the output video name. No need to manually enter the extension.
+
+Description:
+
+- By default, it will automatically fill in the main part of the current video filename
+- The actual output will automatically use the original video extension
+- For example, if the original video is `demo.mov`, and you enter `demo_Subtitled` as the output filename, the final result will typically be `demo_Subtitled.mp4`
+
+### 3.4 Single Language Subtitle Burn Steps
+
+Applicable to projects with only one subtitle track.
+
+Operation steps:
+
+1. Open the target project
+2. Confirm that the current project has generated subtitles
+3. Check subtitle content and timeline in the player
+4. Click `Burn` at the top
+5. Select or confirm `Output Directory`
+6. Enter `Output Filename`
+7. Click `Start Burn`
+8. Wait for the progress bar to show completion
+
+After successful burn:
+
+- Progress will display as `Complete`
+- Software will automatically open the directory containing the output file
+- Popup will automatically close
+
+### 3.5 Bilingual Subtitle Burn Steps
+
+Applicable to projects that have completed bilingual processing.
+
+When the system detects that the current media file has bilingual subtitles, the window will prompt:
+
+`Bilingual subtitles detected, will burn two subtitle lines (top: original language, bottom: translated language)`
+
+Bilingual burn rules are as follows:
+
+- Top line displays the primary subtitle
+- Bottom line displays the secondary subtitle
+- Both subtitle styles can be set separately
+- Both subtitles will be burned during export
+
+Operation steps are the same as single language, except the system will automatically switch to bilingual burn mode.
+
+## 4. Batch Burn
+
+### 4.1 Feature Entry
+
+The batch burn feature is located in the bottom operation bar of the import area.
+
+When files exist in the import area and files are selected, you can click:
+
+`Batch Burn`
+
+The system will open the "Batch Burn Subtitles to Video" window.
+
+### 4.2 Which Files Can Participate in Batch Burn
+
+Batch burn does not execute unconditionally on all imported files. The system will automatically filter available files.
+
+Files that can participate in the burn must simultaneously meet:
+
+- Have corresponding video source
+- Have available subtitle content
+
+For bilingual files, you need:
+
+- Primary subtitle content
+- Secondary subtitle content
+
+The following files will be automatically skipped:
+
+- Pure audio files
+- Files without matched video source
+- Files without subtitle data
+
+The interface will directly display:
+
+- How many files have been selected
+- How many files can actually be burned
+
+If the number of selected files doesn't match the number of burnable files, the system will prompt:
+
+`Audio files, files missing video source, or files without subtitle data will be automatically skipped`
+
+### 4.3 Batch Burn Steps
+
+1. Import multiple media files in the import area
+2. Select the files to be processed
+3. Confirm these files already have subtitle results
+4. Click `Batch Burn` at the bottom
+5. Select `Export Directory` in the popup
+6. Click `Start Execution`
+7. Wait for task processing to complete
+
+### 4.4 Batch Burn Popup Description
+
+The popup mainly contains:
+
+#### File Count Statistics
+
+Will display:
+
+- Total number of selected files
+- Number of files that can execute burn
+
+#### Export Directory
+
+All batch burn output files will be saved here uniformly.
+
+Description:
+
+- This directory will be remembered and automatically filled in the next time the popup opens
+- It is recommended to create a separate export folder for batch tasks for easier management
+
+#### Current Task Prompt
+
+If a batch burn task is currently executing, the popup will prompt:
+
+`A batch burn task is currently executing. Continuing to start will override the previous task status display.`
+
+Note:
+
+- "Override" here mainly refers to the interface task status display being taken over by the new task
+- It is not recommended to repeatedly initiate new tasks before confirming the previous batch burn has ended
+
+### 4.5 Batch Output File Naming Rules
+
+Batch burn output files will use:
+
+- Original filename main part
+- Original video extension
+
+For example:
+
+- Original file: `lesson01.mp4`
+- Output directory: `D:/exports`
+- Output result: `D:/exports/lesson01.mp4`
+
+If the output path is exactly the same as the original video, the system will prevent execution and report an error to avoid overwriting the original video.
+
+Common error:
+
+`Output file cannot be the same as the original video, please modify the output directory or filename`
+
+### 4.6 Batch Progress View
+
+During batch burn, the bottom of the import area will display total task progress, for example:
+
+`Burning, Progress: 2/10 files`
+
+
+### 4.7 Handling Batch Burn Failures
+
+Batch tasks use a file-by-file processing mechanism, therefore:
+
+- Single file failure will not interrupt the entire batch task
+- Remaining files will continue to execute
+- Failed files will record error status
+
+Suitable for running through the entire batch first during large-scale processing, then handling individual exception files afterward.
+
+## 5. Relationship Between Subtitle Style and Burn Results
+
+Both burn and batch burn will read your currently saved subtitle style.
+
+Styles typically come from subtitle preview settings in the player, mainly including:
+
+- Font
+- Font size
+- Font color
+- Stroke color
+- Stroke thickness
+- Bottom offset
+- Line spacing for bilingual top/bottom lines
+
+### 5.1 Single Language Subtitle Style
+
+Single language subtitles typically use the primary subtitle style and display in the bottom area.
+
+### 5.2 Bilingual Subtitle Style
+
+Bilingual subtitles use two sets of styles:
+
+- Top (Primary) subtitle style
+- Bottom (Secondary) subtitle style
+
+Where:
+
+- The bottom subtitle's "distance from bottom" determines the position of the entire subtitle group from the bottom of the frame
+- The top subtitle's "distance from bottom line" determines the spacing between the top and bottom lines
+
+### 5.3 Resolution Adaptation Description
+
+The system will automatically select the design basis based on whether the video is landscape or portrait:
+
+- Landscape video calculates based on 1920 × 1080 logical style
+- Portrait video calculates based on 1080 × 1920 logical style
+
+This means the same set of styles will automatically adapt between landscape and portrait videos, but it is still recommended to actually preview to confirm the final visual effect.

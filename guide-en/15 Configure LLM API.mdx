@@ -1,0 +1,19 @@
+---
+title: "15 Configure LLM API"
+---
+
+haoone supports custom LLM API configuration. Once enabled, all features that use large language models, except remote transcription, will use the custom API.
+
+Click Settings:
+
+![#w200](../image/llm1.png)
+
+Click API Configuration:
+
+![#w400](../image/llm2.png)
+
+Toggle the switch. Only OpenAI-style APIs are supported. Enter the endpoint URL, key, and model.
+
+After filling in, be sure to click "Test Connectivity" to ensure it works properly before use.
+
+You can customize concurrency settings. The default is 5. Higher concurrency means faster parallel processing, but note that many LLM providers limit concurrency.

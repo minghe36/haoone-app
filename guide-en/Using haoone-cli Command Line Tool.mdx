@@ -1,0 +1,477 @@
+---
+title: "Using haoone-cli Command Line Tool"
+---
+
+haoone-cli has two purposes:
+
+* Purpose 1: Called by DaVinci Resolve plugin, PR plugin
+* Purpose 2: Used by AI Agents, e.g., can use Claude Code to call haoone-cli to transcribe audio/video files
+
+The terminal command is unified as:
+
+```text
+haoone-cli
+```
+
+## Quick Start
+
+1 Click Settings, switch to "Command Line Tool"
+2 Click the "Launch Command Line Tool" button
+3 Restart the command line terminal
+
+Run help directly:
+
+```bash
+haoone-cli --help
+```
+
+## Prerequisites
+
+This CLI is not a completely independent stateless tool. It reads haoone desktop local configuration, so it's recommended to meet these prerequisites first:
+
+1. haoone desktop has been installed and opened.
+2. Login completed on the desktop.
+3. Local model installation completed.
+
+## Command Overview
+
+Currently supported main commands:
+
+- `transcribe` - Transcribe audio or video
+- `installed-models` - List all installed models
+- `manuscript-matching` - Manuscript matching
+- `format-draft` - Format manuscript
+- `batch-transcribe` - Batch transcribe media files
+- `batch-add-hotwords` - Batch add hot words and write to hot_words.json
+- `get-hotwords` - Get hot word configuration and print in table format
+- `get-config` - Get key software configuration information
+- `get-project-list` - Get all project information under the software
+- `get-project-srt-list` - Get all SRT file paths under a specified project
+- `create-project` - Create a new project and switch to it as current project
+- `delete-project` - Delete project directory and clean up current project record
+
+
+View help for a specific command:
+
+```bash
+haoone-cli transcribe --help
+```
+
+## Most Common Scenarios
+
+## 1. View Installed Models on This Machine
+
+```bash
+haoone-cli installed-models
+```
+
+Suitable for first confirming whether local models are ready.
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | Directly scan and output list of installed models |
+
+## 2. Transcribe Single Audio or Video
+
+```bash
+haoone-cli \
+  transcribe \
+  --timeline-name demo \
+  --audio-file-path /path/to/audio.mp3
+```
+
+Parameter table:
+
+| Parameter | Required | Default | Description |
+| --- | --- | --- | --- |
+| `--timeline-name` / `-n` | No | Auto-extracted from filename | Timeline name |
+| `--audio-file-path` / `-f` | Yes | None | Input audio or video path |
+| `--output` / `-o` | No | Auto-inferred | Output directory |
+| `--model` / `-m` | No | `Chinese-English-v2-2026` | Transcription model name |
+| `--language` / `-l` | No | `zh` | Language code |
+| `--enable-ai-correction` / `-a` | No | `false` | Whether to enable AI smart line splitting and hot word replacement |
+| `--max-subtitle-length` / `-s` | No | `25` | Maximum single line subtitle length |
+
+Example, local transcription:
+
+```bash
+haoone-cli \
+  transcribe \
+  -n interview01 \
+  -f /Users/you/Desktop/interview01.mp3 \
+  -m Chinese-English-v2-2026 \
+  -l zh
+```
+
+Example, enable AI smart line splitting and hot word replacement:
+
+```bash
+haoone-cli \
+  transcribe \
+  -n interview01 \
+  -m Chinese-English-v2-2026 \
+  -f /Users/you/Desktop/interview01.mp4 \
+  -a true \
+  -l zh \
+  -s 22
+```
+
+Output results:
+
+- `*.srt`
+- `*.json`
+
+If `--output` is not explicitly specified, by default it will preferentially write to the current project's `transcriptions` directory; if there is no current project, it will write to the `transcriptions` directory at the same level as the input file.
+
+When integrating with scripts, you can pay attention to these standard outputs:
+
+```text
+media_path=...
+segmentLength=...
+srt_file_path=...
+json_file_path=...
+```
+
+## 3. Batch Transcribe Multiple Media Files
+
+```bash
+haoone-cli \
+  batch-transcribe \
+  -f /path/to/a.mp3,/path/to/b.mp4 \
+  -o /path/to/out \
+  -l zh
+```
+
+Parameter table:
+
+| Parameter | Required | Default | Description |
+| --- | --- | --- | --- |
+| `--audio-file-path` / `-f` | Yes | None | Input media files, comma-separated or repeated |
+| `--output` / `-o` | No | Auto-inferred | Output directory |
+| `--model` / `-m` | No | `Chinese-English-v2-2026` | Transcription model name |
+| `--language` / `-l` | No | `zh` | Language code |
+| `--enable-online-transcript` / `-w` | No | `false` | Whether to enable online transcription |
+| `--enable-ai-correction` / `-a` | No | `true` | Whether to enable AI smart line splitting and hot word replacement |
+| `--max-subtitle-length` / `-s` | No | `25` | Maximum single line subtitle length |
+
+## 4. Manuscript Formatting
+
+```bash
+haoone-cli \
+  format-draft \
+  -p /path/to/manuscript.txt
+```
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `--path` / `-p` | Yes | Input manuscript file path |
+
+This command will print the formatting results directly to the terminal. If you want to save to a file, you can redirect:
+
+```bash
+haoone-cli \
+  format-draft \
+  -p /path/to/manuscript.txt > /path/to/manuscript.formatted.txt
+```
+
+## 5. Manuscript Matching
+
+```bash
+haoone-cli \
+  manuscript-matching \
+  --manuscript-path /path/to/manuscript.txt \
+  -n transcript_name \
+  -p project_name
+```
+
+Parameter table:
+
+| Parameter | Required | Default | Description |
+| --- | --- | --- | --- |
+| `--manuscript-path` | Yes | None | Manuscript file path |
+| `--name` / `-n` | Yes | None | Transcription name (used to locate transcription result JSON) |
+| `--project` / `-p` | No | Current project | Project name |
+| `--enable-splite-follows-script` / `-f` | No | `false` | Whether to split lines according to manuscript |
+
+> Note: Manuscript matching is limited to activated users
+
+After success, it will output the generated subtitle file path.
+
+## 6. Get Software Configuration Information
+
+```bash
+haoone-cli get-config
+```
+
+This command will output key software configuration information in table format, including:
+
+- Application data directory path
+- app.json file path
+- Activation status
+- Recently opened projects
+- Current project
+- Project directory
+- Project count
+- Custom API configuration (endpoint, model, apiKey, etc.)
+- User token status
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | Directly read and output configuration information |
+
+## 7. Get Project List
+
+```bash
+haoone-cli get-project-list
+```
+
+This command will list all project information in table format, including:
+
+- Project name
+- Project path
+- Update time
+- Recently opened time
+- Whether it's the current project
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | Directly read and output project list |
+
+## 8. Get SRT File List Under Project
+
+```bash
+haoone-cli \
+  get-project-srt-list \
+  -p project_name
+```
+
+This command will recursively find all `.srt` files under the specified project directory and output paths.
+
+Parameter table:
+
+| Parameter | Required | Default | Description |
+| --- | --- | --- | --- |
+| `--project-name` / `-p` | No | Current project | Project name |
+
+## 9. Create Project
+
+```bash
+haoone-cli \
+  create-project \
+  -n demo-project
+```
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `--name` / `-n` | Yes | Project name |
+
+## 10. Delete Project
+
+```bash
+haoone-cli \
+  delete-project \
+  -n demo-project
+```
+
+If `--name` is not passed, the program will attempt to delete the current project.
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `--name` / `-n` | No | Project name, when not passed will attempt to delete current project |
+
+## 11. Batch Add Hot Words
+
+Pass string directly:
+
+```bash
+haoone-cli \
+  batch-add-hotwords \
+  -l zh \
+  --input "OpenAI=欧喷AI,Open A I"
+```
+
+Read from file:
+
+```bash
+haoone-cli \
+  batch-add-hotwords \
+  -l zh \
+  -f /path/to/hotwords.txt
+```
+
+Parameter table:
+
+| Parameter | Required | Default | Description |
+| --- | --- | --- | --- |
+| `--language` / `-l` | Yes | None | Hot word language |
+| `--file` / `-f` | No | None | Read hot word content from file |
+| `--input` | No | None | Directly pass hot word text |
+
+Description:
+
+- At least one of `--file` and `--input` must be passed
+- When both are passed, `--file` takes priority
+
+Supports two input formats.
+
+Format one:
+
+```text
+OpenAI=欧喷AI,Open A I
+ChatGPT=chat g p t,Chat GP T
+```
+
+Format two:
+
+```text
+OpenAI
+欧喷AI
+Open A I
+
+ChatGPT
+chat g p t
+Chat GP T
+```
+
+## 12. Get Hot Word Configuration
+
+```bash
+haoone-cli get-hotwords
+```
+
+This command will output current hot word configuration in table format, including:
+
+- Language
+- Hot word
+- Aliases
+- Pinyin
+- First letter
+
+Parameter table:
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | Directly read and output hot word configuration |
+
+## Troubleshooting
+
+If you encounter problems running `haoone-cli`, you can check in the following order.
+
+## 1. First Confirm Basic Conditions
+
+- Install haoone desktop and complete user login
+- Please confirm `haoone-cli` is correctly installed, and can be directly executed as `haoone-cli --help` in the current terminal
+- Please confirm you are using the latest version of haoone desktop and corresponding CLI
+- If you just installed or updated CLI, please close and reopen the terminal first to let PATH changes take effect
+- If the command depends on login, project, or AI capabilities, please start haoone desktop first, and confirm you are logged in, activated, and have opened a project
+
+## 2. If Terminal Prompts `haoone-cli: command not found`
+
+First directly check if the command is available:
+
+```bash
+haoone-cli --help
+which haoone-cli
+```
+
+If `which haoone-cli` has no output, it usually means:
+
+- `haoone-cli` is not in PATH
+- Your current terminal hasn't been restarted
+- CLI file doesn't have execution permission
+
+You can try running with absolute path first:
+
+```bash
+/Users/XXX/Documents/dev/app/haoone/src-tauri/binaries/haoone-cli-aarch64-apple-darwin --help
+```
+
+If the absolute path works but `haoone-cli` doesn't, the problem is basically PATH.
+
+## 3. Reopen Terminal
+
+If you just completed installation, copied files, created symbolic links, or modified PATH, please restart the terminal and try again:
+
+```bash
+haoone-cli --help
+```
+
+Many "clearly installed but command not found" problems are because the current terminal session hasn't loaded the new PATH yet.
+
+## 4. Check Desktop Status
+
+Some commands depend on haoone desktop local status, rather than running completely independently. When encountering the following issues, check the desktop first:
+
+- Prompts not logged in
+- Prompts not activated
+- Online transcription fails
+- Translation / bilingual subtitles / AI correction failed
+- Cannot find current project
+
+Recommended checks:
+
+1. haoone desktop has been launched
+2. Current account is logged in
+3. Software is activated
+4. Current project can be opened normally on desktop
+
+## 6. Windows
+
+If Windows prompts "is not recognized as an internal or external command", usually PATH hasn't taken effect, or the directory containing `haoone-cli.exe` hasn't been added to PATH.
+
+Recommended troubleshooting order:
+
+1. Confirm `haoone-cli.exe` actually exists
+2. Confirm its directory has been added to user PATH
+3. Completely close current terminal, then reopen
+4. Execute `haoone-cli --help` again
+
+If you're not sure whether PATH has taken effect, you can first navigate to the binary directory and then execute.
+
+## 7. Transcription or AI Feature Failures
+
+Common reasons for these issues:
+
+- Not logged in
+- Not activated
+- Current project missing
+- Network unavailable
+- Local model not installed
+- Online transcription audio exceeds 45 minutes
+
+Recommended to first execute:
+
+```bash
+haoone-cli installed-models
+```
+
+Confirm models are visible, then check desktop login and network status.
+
+## 8. Output File Not Found
+
+If the command completed execution but you can't find the generated file, first check:
+
+1. The `--output` directory you explicitly passed
+2. `transcriptions` under the current project directory
+3. `transcriptions` under the same directory as the input file
+
+The transcription command will also print to stdout:
+
+```text
+srt_file_path=...
+json_file_path=...
+```
+
+You can directly confirm the actual output path using these two lines.

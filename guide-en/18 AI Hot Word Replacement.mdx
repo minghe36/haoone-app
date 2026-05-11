@@ -1,0 +1,227 @@
+---
+title: "18 AI Hot Word Replacement"
+---
+
+After transcription or translation is complete, combined with your pre-maintained hot word library, automatically replace incorrectly recognized brand names, person names, product names, and proprietary terms with correct spellings.
+
+Suitable for these scenarios:
+
+- Software names, brand names are often misrecognized, e.g., `haoone` recognized as `Howon`
+- Person names, company names, project names have fixed spelling, don't want to manually change each time
+- Many Chinese-English mixed speech, transliterated words, foreign proprietary terms, ordinary ASR easily writes incorrectly
+- After batch transcription, translation, want to unify terminology
+
+## I. Feature Effect
+
+AI hot word correction is not simple "find and replace all".
+
+It will combine:
+
+- Current subtitle content
+- Your maintained hot words
+- Possible wrong words or aliases
+- Contextual semantics
+
+To determine whether replacement should occur.
+
+This means:
+
+- The same wrong word may not be replaced in all sentences
+- If contextual semantics don't hold, the system may keep the original text
+- The more accurate the hot word settings, the more stable the replacement results typically are
+
+## II. Preparation Before Use
+
+Before formal use, it is recommended to prepare a hot word list for the target language first.
+
+You need to confirm:
+
+- Have entered a project
+- Have imported audio or video
+- Have logged in or configured an available LLM interface
+- Know which language the current material primarily uses
+
+Description:
+
+- Hot words are maintained separately by language
+- Chinese, English, Japanese, etc. can each maintain independent hot word lists
+
+## III. How to Add Hot Words
+
+### 1. Enter Hot Word Settings
+
+Entry location:
+
+1. Open `Application Settings` in the top-right corner or interface
+2. Enter `Hot Word Settings`
+3. Select the language to maintain, e.g., `Chinese`, `English`
+
+After entering, you will see the `Hot Word List` for the current language.
+
+### 2. Add Single Hot Word
+
+Click `Add Hot Word`, fill in the following content:
+
+- `Hot Word`: The correct spelling you want to finally display
+- `Wrong Word`: Common incorrect spellings during recognition, multiple can be separated by commas
+
+Example:
+
+- Hot Word: `haoone`
+- Wrong Word: `Howon, 好翁, 浩万`
+
+Then click `Confirm Add`.
+
+Additional notes:
+
+- Chinese hot words are suitable for filling in correct Chinese words
+- English or other non-Chinese hot words, when the interface is available, the system will automatically supplement more suitable pronunciation or alias information for recognition matching
+
+### 3. Batch Add Hot Words
+
+If you have a batch of fixed terms, it is recommended to use `Batch Add Hot Words`.
+
+Currently supports two formats.
+
+First: Equals format
+
+```text
+haoone=Howon,好翁,浩万
+Whisper=卫斯泊,whsper
+DaVinci=达文西,大芬奇
+```
+
+Second: Line break grouping format
+
+```text
+haoone
+Howon
+好翁
+浩万
+
+Whisper
+卫斯泊
+whsper
+```
+
+After filling in, click `Confirm Add`.
+
+Recommendations:
+
+- One hot word should preferably correspond to only one type of semantics
+- Wrong words should fill in "what it's often recognized as", don't put unrelated synonyms
+
+### Use AI to Batch Add Hot Words
+
+Example prompt to input in Gemini:
+
+```text
+Help me generate 100 of the hottest English hot words in the AI industry, do not add serial numbers, separate wrong words with English commas, format as follows:
+Hot Word=1-3 common wrong words
+Hot Word=1-3 common wrong words
+Hot Word=1-3 common wrong words
+```
+
+### 4. Edit or Delete Hot Words
+
+In the hot word list:
+
+- Click the wrong word area to directly edit aliases
+- Click the delete button on the right to remove the hot word
+- After modification, click `Save Settings` at the bottom
+
+If not saved, the new hot word configuration will not be formally written.
+
+## IV. How to Use During Transcription
+
+### 1. Open Transcription Window
+
+After importing media, open the transcription or online transcription window.
+
+### 2. Enable `AI Hot Word Replacement`
+
+In transcription settings, you will see the following related options:
+
+- `AI Hot Word Replacement`
+- `AI Smart Line Splitting`
+
+Just turn on `AI Hot Word Replacement`.
+
+Description:
+
+- In the current version interface, the previous `AI Correction` toggle is hidden
+- Hot word correction capability is now mainly reflected through `AI Hot Word Replacement`
+
+### 3. Start Transcription
+
+Confirm the following parameters before starting execution:
+
+- Model
+- Language
+- Maximum single line subtitle length
+- Whether to enable `AI Hot Word Replacement`
+
+When transcription enters the post-processing stage, the progress may display:
+
+- `AI Hot Word Replacement in progress...`
+
+Indicating the system is executing correction based on the current language's hot word list.
+
+## V. Result Performance
+
+After execution completes, the system will replace matched wrong words with the correct hot words you set, and continue to use the replaced subtitles for:
+
+- Generating SRT
+- Writing project subtitle data
+- Subsequent smart line splitting
+- Terminology unification after translation
+
+Common examples:
+
+- `Howon remote transcription` -> `haoone remote transcription`
+- `达文西` -> `DaVinci`
+- `卫斯泊` -> `Whisper`
+
+## VI. Usage Recommendations
+
+To make AI hot word correction more stable, it is recommended to maintain hot words this way:
+
+- Prioritize adding high-frequency proprietary nouns, don't pile too many common words at the beginning
+- Wrong words should fill in "recognition error words", don't fill in words with similar meanings but different semantics
+- Maintain separately for each language, don't put Chinese wrong words in English hot word list
+- Test with a small range of materials first, then put into batch use
+- If a word is incorrectly replaced, first check if it was set as too broad a wrong word
+
+## VII. Common Questions
+
+### 1. Why did I enable the feature but no replacement occurred?
+
+Common reasons:
+
+- No hot words configured for the current language
+- Hot words configured, but wrong words didn't cover this recognition result
+- Contextual semantics don't hold, system determined replacement shouldn't occur
+- Didn't click `Save Settings`
+
+### 2. Why does the same wrong word sometimes replace, sometimes not?
+
+Because this is hot word correction with contextual judgment, not mechanical replacement. The system will judge whether the word in this sentence actually refers to the proprietary noun you set.
+
+### 3. Why can English hot words also do correction?
+
+English or other non-Chinese hot words, with available interface support, will generate aliases or pronunciation representations more suitable for matching, so not only can match exactly consistent words, but can also handle some transliteration, misspelling, or transcription errors.
+
+### 4. Will hot word correction affect the timeline?
+
+Normally it won't. It mainly modifies subtitle text content, doesn't change the time information of subtitle paragraphs.
+
+## VIII. Recommended Usage
+
+If you are using this for the first time, it is recommended to follow the process below:
+
+1. First maintain 5 to 20 high-frequency proprietary words in `Hot Word Settings`
+2. Test transcription with a small sample material
+3. Check which words hit correctly, which words need wrong word supplementation
+4. Then formally use for full material or batch tasks
+
+This typically achieves stable results faster and can reduce subsequent manual subtitle editing time.

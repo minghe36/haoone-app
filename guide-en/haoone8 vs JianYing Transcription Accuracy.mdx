@@ -1,0 +1,56 @@
+---
+title: "haoone8 vs JianYing Transcription Accuracy Comparison"
+---
+
+Below is a comparison table of transcription accuracy among haoone remote transcription, haoone local transcription, and JianYing transcription.
+
+I've organized 7 test audio files of different types, with audio duration around 3 minutes. If interested, you can download the audio and transcription SRT result files to verify.
+
+[Test Case Compressed Package](https://cdn.haoai.pro/assets/haoone%E6%B5%8B%E8%AF%95%E9%9F%B3%E9%A2%91.zip)
+
+haoone transcription uses default configuration, with AI correction and smart line splitting enabled.
+
+| Audio | haoone Remote Transcription | haoone Local Transcription (Chinese-English Specialized Model) | JianYing Transcription |
+| --- | --- | --- | --- |
+| High-quality Chinese Voice | 97% | 96% | 96% |
+| Low-quality Chinese Voice | 91% | 90% | 96% |
+| Chinese Game Commentary | 93% | 85% | 90% |
+| High-quality English Voice | 94% | 92% | 86% |
+| English Song | 90% | Has bug, no speech recognized | 95% |
+| Minnan Dialect Voice | 85% | 83% | 40% |
+| Minnan Dialect Song | 85% | 85% | Unusable |
+
+### High-quality Chinese Voice Scenario:
+
+This is an audio introducing the Ricoh GR4 camera. The differences among the three are not significant, with accuracy rates all above 95%. Main errors are concentrated on product proprietary terms. haoone's number processing needs optimization, currently displaying as Chinese numerals.
+
+### Low-quality Chinese Voice Scenario:
+
+This is an outdoor audio with high background noise. JianYing performs much better. haoone has missing character situations. I will add AI voice enhancement functionality to haoone in the future.
+
+### Chinese Game Commentary Scenario:
+
+This is a Honor of Kings commentary video with lots of jargon and fast speech, greatly testing model capability. haoone remote transcription performs best, accurately recognizing esports terms like "speed run", "lane priority", "peel". JianYing misunderstands some game jargon, e.g., recognizing "speed run" as "dredge". haoone's local transcription performance is average, with more errors.
+
+### High-quality English Voice Scenario:
+
+This is an audio introducing new Claude Code features. haoone remote transcription performs best. JianYing transcription is average, with many errors in computer vocabulary. For example, haoone accurately recognized "cursor"; JianYing misheard it as "Claw Code". haoone's English formatting processing needs optimization, with no capitalization handling for first letters or proprietary nouns.
+
+### English Song Recognition Scenario:
+
+JianYing is best, haoone performance is average, with only about 90% accuracy. Local transcription has a bug, resulting in no transcription output, which will be optimized later.
+
+### Minnan Dialect Voice Scenario:
+
+JianYing doesn't perform well in dialect recognition, basically unusable. haoone can achieve 85% accuracy. Minnan dialect has some special colloquialisms that can be further optimized.
+
+### Minnan Dialect Song Scenario:
+
+JianYing recognition is completely wrong, haoone can still achieve 85% accuracy.
+
+### Summary:
+
+haoone's online transcription and JianYing can both achieve over 95% accuracy in Chinese transcription. haoone has significant advantages in dialect recognition. JianYing performs better in English recognition.
+
+haoone's local transcription, in scenarios with good voice quality, has accuracy close to JianYing. In poor voice quality scenarios, it's inferior to JianYing, which will be further optimized later by adding AI voice enhancement functionality.
+

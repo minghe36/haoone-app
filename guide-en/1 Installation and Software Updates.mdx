@@ -1,0 +1,229 @@
+---
+title: "1 Installation and Software Updates"
+---
+
+## 💻 System Requirements
+
+### macOS
+
+- **Operating System**: macOS 10.15 (Catalina) or higher
+- **Processor**: Apple Silicon (M2/M3/M4)
+- **Memory**: At least 8GB RAM
+- **Storage**: At least 500MB free space
+
+### Windows
+
+Important: Windows requires a dedicated graphics card, otherwise execution will fail or be very slow.
+
+- **Operating System**: Windows 10 or Windows 11 (64-bit)
+- **Processor**: Intel Core i5 or higher
+- **Memory**: At least 8GB RAM
+- **Graphics Card**: Dedicated graphics card required
+- **Storage**: At least 500MB free space
+
+---
+
+## 🍎 macOS Installation Guide
+
+### Step 1: Download the Installer
+
+1. Visit the official download page: [https://haoai.pro/haoone/download](https://haoai.pro/haoone/download)
+2. Click the **macOS Download** button
+3. Wait for the download to complete (filename similar to `haoone_8.5.0_aarch64.dmg`)
+
+### Step 2: Install the Software
+
+1. **Open the Installer**
+   - Find the `.dmg` file in your "Downloads" folder
+   - Double-click to open the installer
+
+2. **Drag to Install**
+   - In the opened window, drag the application icon to the **Applications** folder
+   - Wait for the copy to complete
+
+3. **First Launch**
+   - Please allow the software access to your Documents folder
+   - DaVinci Resolve/PR plugins will be automatically installed
+4. **Complete User Login**   
+
+## 🪟 Windows Installation Guide
+
+### Step 1: Download the Installer
+
+1. Visit the official download page: [https://haoai.pro/haoone/download](https://haoai.pro/haoone/download)
+2. Click the **Windows Download** button
+3. Wait for the download to complete (filename similar to `haoone_8.5.0_x86-setup.exe`)
+
+### Step 2: Run the Installer
+
+1. **Start Installation**
+   - Find the `.exe` file in your "Downloads" folder
+   - Double-click to run the installer
+
+2. **Handle Windows Defender Prompt**
+   - If you see **Windows protected your PC** prompt:
+     - Click **More info**
+     - Click **Run anyway**
+
+3. **Choose Installation Location**
+   - Default installation path: `C:\Program Files\[Software Name]`
+   - Click **Browse** to change the installation location
+   - Click **Next**
+
+7. **Complete Installation**
+   - Wait for installation to complete
+   - Check "Launch software"
+   - Click **Finish**
+8. **First Launch**
+   - DaVinci Resolve/PR plugins will be automatically installed
+9. **Complete User Login**
+
+---
+
+## Software Updates
+
+haoone comes with a built-in automatic update system to help you keep the software up to date. The system automatically checks for updates and notifies you about new versions.
+
+Two methods, prioritize the first method:
+
+* 1 When a new version is available, you'll see an update notification at the top of the software. Click "Download and Install Update". Download typically takes about 3 minutes, and the software will automatically restart after successful installation.
+* 2 Download the latest installer from the official website [https://haoai.pro/haoone/download](https://haoai.pro/haoone/download). Re-login required.
+
+### Will Updates Delete My Projects?
+
+No! The update process is **completely safe**:
+
+✅ All project files remain unchanged
+✅ Personal settings and preferences are preserved
+✅ Activation information remains valid
+✅ No data will be lost
+
+Updates only replace the application itself and do not affect any of your data.
+
+### What Happens If I Close the App During Update?
+
+Avoid closing the application during the update process.
+
+### Can I Roll Back to an Older Version?
+
+Yes, download historical versions from the official website: [https://haoai.pro/haoone/download](https://haoai.pro/haoone/download)
+
+### Do I Need to Re-download Models After Automatic Updates?
+
+No, re-downloading models is not necessary.
+
+### "Permission Denied" During Installation
+
+**Symptoms**:
+- Shows "Permission Denied" or "Access Denied"
+- macOS installation fails
+
+**Causes**:
+- Insufficient user permissions
+- Disk is locked
+- Security software blocks installation
+
+**Solution Steps**:
+
+**macOS**:
+1. Check administrator permissions:
+   - System Preferences > Users & Groups
+   - Confirm current user has administrator privileges
+
+2. Disable security software:
+   - Temporarily disable antivirus software
+   - Some software may block application installation
+
+3. Manual installation:
+   - Download the latest version from the official website
+   - Manually replace the application in the Applications folder
+
+**Windows**:
+1. Run as administrator:
+   - Right-click the installer
+   - Select "Run as administrator"
+
+2. Disable antivirus software:
+   - Temporarily turn off Windows Defender
+   - Disable third-party antivirus software
+
+3. Clear file locks:
+   - Close all haoone processes
+   - Restart your computer and try again
+
+### Problem: Application Won't Open After Update
+
+**Symptoms**:
+- Application won't launch after update completes
+- No response when clicking
+- Application crashes immediately
+
+**Causes**:
+- Interruption during installation
+- Insufficient disk space
+- Missing system libraries
+
+**Solution Steps**:
+1. Ensure sufficient disk space:
+   - macOS: At least 1 GB free space required
+   - Windows: At least 500 MB free space required
+   - Clean up junk and temporary files
+
+2. Check application integrity:
+   - Restart your computer
+   - Relaunch the application
+
+3. Reinstall:
+   - Uninstall haoone
+   - Download and reinstall from the official website
+
+4. Reset application preferences:
+   - macOS:
+     ```bash
+     rm -rf ~/Library/Application\ Support/com.haoone
+     ```
+   - Windows: Delete `C:\Users\<Username>\AppData\Local\com.haoone`
+   - Relaunch the application
+
+---
+
+## Uninstall Application
+
+If you want to uninstall haoone:
+
+#### Step 1: Optional - Unbind Activation Code
+
+You can unbind your device through the official website
+
+#### Step 2: Uninstall Application
+
+**macOS**:
+1. Open Finder
+2. Navigate to Applications folder
+3. Find haoone
+4. Right-click → Move to Trash
+5. Empty Trash
+
+**Windows**:
+1. Open Control Panel
+2. Go to Programs → Programs and Features
+3. Find haoone
+4. Click Uninstall
+5. Follow the prompts to complete uninstallation
+
+
+#### Step 3: Clean Up Residual Files (Optional)
+
+Delete the haoone directory in your Documents folder.
+
+**macOS**:
+```bash
+# Delete application configuration and data
+rm -rf ~/Library/Application\ Support/com.haoone
+rm -rf ~/Library/Caches/com.haoone
+```
+
+**Windows**:
+```
+Delete folder: C:\Users\<Username>\AppData\Local\com.haoone
+```
