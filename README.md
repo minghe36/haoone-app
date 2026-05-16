@@ -5,7 +5,7 @@
   <h1>haoone</h1>
   <p>新一代 AI 专业字幕软件，中英转录识别准确率96%，词语音频对齐率98%</p>
 
-  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill) 
+  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](./README-en.md)
 </div>
 
 ## haoone 软件介绍
