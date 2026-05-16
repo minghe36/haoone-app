@@ -33,7 +33,7 @@ windows 与 mac 双平台支持
 
 [下载软件](https://www.haoai.pro/haoone/download)
 
-![介绍图片](./image/haoone 介绍.png)
+![介绍图片](https://cdn.haoai.pro/assets/haoone%20%E4%BB%8B%E7%BB%8D.png)
 
 ## 软件截图
 
