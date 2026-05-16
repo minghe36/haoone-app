@@ -5,14 +5,15 @@
   <h1>haoone</h1>
   <p>新一代 AI 专业字幕软件，中英转录识别准确率96%，词语音频对齐率98%</p>
 
-  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli) 
+  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill) 
 </div>
 
 ## haoone 软件介绍
 
 覆盖剪辑字幕与字幕翻译工作流的所有核心需求，可能是市面上功能最全面的字幕软件。
 
-haoone 软件支持基础功能永久免费使用，增强功能一次性买断，无订阅费用。弃用 whisper 方案，基于 qwen3-asr 深入优化，中文高识别准确率，转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速。
+haoone 软件支持基础功能永久免费使用，增强功能一次性买断，无订阅费用。弃用 whisper 方案，基于 qwen3-asr 深入优化，中文高识别准确率，转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速。自研词语级音频对齐。
+中英识别准确率与稳定性、词语级对齐精度吊打市面上所有 whisper 套壳软件。
 
 本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API...
 
