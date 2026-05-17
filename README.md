@@ -5,7 +5,7 @@
   <h1>haoone</h1>
   <p>新一代 AI 专业字幕软件，中英转录识别准确率96%，词语音频对齐率98%</p>
 
-  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](./README-en.md)
+  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
 
 ## haoone 软件介绍
@@ -35,16 +35,50 @@ windows 与 mac 双平台支持
 
 ![介绍图片](https://cdn.haoai.pro/assets/haoone%20%E4%BB%8B%E7%BB%8D.png)
 
+## 开源计划
+
+开源逐步推进中
+
+[haoone-skill 已开源](https://github.com/minghe36/haoone-skill)
+
+haoone PR 插件待开源
+
 ## 软件截图
 
+软件主界面，专业易用的字幕编辑器，支持项目与多文件管理：
+
 ![软件截图](https://cdn.haoai.pro/assets/h-1.hao.webp)
+
+本地转录：基于qwen3-asr，多语种支持，高精度词语级对齐，带有 AI 拆行、AI 智能热词替换、AI 英文专有名词修正
+
 ![软件截图](https://cdn.haoai.pro/assets/h-2.hao.webp)
+
+在线转录：准确度超过剪映、豆包 API ，价格显著低于 豆包 API
+
 ![软件截图](https://cdn.haoai.pro/assets/h-3.hao.webp)
+
+不限字数的文稿匹配，带有格式化文稿功能，可选择拆行是否遵循文稿，剪映文稿匹配加强版
+
 ![软件截图](https://cdn.haoai.pro/assets/h-4.hao.webp)
+
+快速编辑视图，快速找到转录错误，快速修改，支持搜索、批量替换，替换后的词自动进入热词
+
 ![软件截图](https://cdn.haoai.pro/assets/h-5.hao.webp)
+
+文稿视图，章节总结视图
+
 ![软件截图](https://cdn.haoai.pro/assets/h-6.hao.webp)
+
+支持双语字幕，长文本优化
+
 ![软件截图](https://cdn.haoai.pro/assets/h-7.hao.webp)
+
+最强大的 AI 热词替换功能实现
+
 ![软件截图](https://cdn.haoai.pro/assets/h-8.hao.webp)
+
+一键安装达芬奇字幕插件，PR 字幕插件
+
 ![软件截图](https://cdn.haoai.pro/assets/h-9.hao.webp)
 
 达芬奇字幕插件：[视频介绍](https://www.bilibili.com/video/BV1eq6uBnEXj/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
