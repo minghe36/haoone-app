@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
-  <h1>haoone</h1>
+  <h1>haoone V10</h1>
   <p>新一代 AI 专业字幕软件，中英转录识别准确率96%，词语音频对齐率98%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
@@ -39,9 +39,11 @@ windows 与 mac 双平台支持
 
 开源逐步推进中
 
-[haoone-skill 已开源](https://github.com/minghe36/haoone-skill)
+[haoone-skill 已开源](https://github.com/minghe36/haoone-skill) ：可在各类 Agent 中使用，转录视频、播客字幕，生成带有高精度时间戳的字幕，得到高准确度的文字稿
 
-haoone PR 插件待开源
+haoone PR字幕插件待开源：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录
+
+haoone 达芬奇字幕插件待开源：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录
 
 ## 软件截图
 
