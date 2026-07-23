@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
   <h1>haoone V10</h1>
-  <p>新一代 AI 专业字幕软件，中英转录识别准确率96%，词语音频对齐率98%</p>
+  <p>新一代 AI 专业字幕软件，中英转录识别准确率97%，词语音频对齐率98%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
@@ -12,17 +12,15 @@
 
 覆盖剪辑字幕与字幕翻译工作流的所有核心需求。
 
-可能是市面上功能最全面的字幕软件，做到开箱即用，windows 与 mac 都可以使用。
+剪映、elevenlabs 语音转文本的最佳本地版平替之一，实现高精准转录自由。
 
-商用级 APP，非 whisper 套壳程序，haoone 用户很多是视频博主、剪辑师（纪录片、短剧、广告等）、外语视频搬运、剧集字幕、知识博主等专业工作者，基于他们的反馈深度优化，目前已经迭代到 V10 版本
+可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型（浩叔评测严选），做到开箱即用，windows 与 mac 都可以使用。
 
-haoone 软件支持基础功能永久免费使用，增强功能一次性买断，无订阅费用。
+haoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用，欢迎给项目点个 star 支持。
 
-弃用 whisper 方案，基于 qwen3-asr 深入优化，中文高识别准确率。
+弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。
 
 转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速。自研词语级音频对齐。
-
-中英识别准确率与稳定性、词语级对齐精度吊打市面上所有 whisper 套壳软件。
 
 本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API...
 
@@ -30,7 +28,7 @@ haoone 软件支持基础功能永久免费使用，增强功能一次性买断�
 
 多文件一键批量化操作
 
-长音视频优化：2 小时的文件都能转录（mac 耗时仅需 10 分钟）
+长音视频优化：2 小时的文件都能转录（mac 耗时仅需 10 分钟），支持说话人识别
 
 快：本地转录3分钟视频，mac mini m4 16G 20 秒内完成
 
