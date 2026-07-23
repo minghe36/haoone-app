@@ -60,8 +60,22 @@ haoone 软件支持基础功能永久免费使用，增强功能一次性买断�
 
 市面上绝大多数软件是基于 whisper 套壳软件，我在在使用的过程中，发现在中文转录上有非常多的问题，时间戳也没办法高精度对齐，所以花了大量时间测评市面上所有的 ASR 模型，详见我的测评报告：[锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)，2026 年了很多的模型准确度、幻觉的控制、中英混说的处理、专有名词的识别，歌曲的识别、方言的识别早已经超过 whisper 了。所以我做了 haoone，一款使用最先进的 ASR 模型的字幕软件，花大量时间构建了转录引擎与时间戳对齐算法。期望 haoone 能够帮助大家节约字幕生成与字幕校对的时间。
 
-haoone 已经迭代了 10 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。
+haoone 已经迭代了 11 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。
 
+## 视频教程
+
+* [haoone AI 字幕软件 V10 保姆级教程，正在实现本地版 elevenlabs的语音转文本软件](https://www.bilibili.com/video/BV1wRMg6REcz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [说话人识别详细使用教程—haoone 字幕软件 V11 上新，对齐 elevenlabs 的说话人识别功能](https://www.bilibili.com/video/BV1LQKH6zEF2/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [接入 mimo-V2.5-asr API，平替 elevenlabs 的语音转文字？最便宜且很强](https://www.bilibili.com/video/BV12bE16REdo/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [达芬奇中如何以最快方式实现不同样式的双语字幕？](https://www.bilibili.com/video/BV1HnVm63EUu/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [AI专业日语字幕软件上新，日语识别准确度 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内完成转录](https://www.bilibili.com/video/BV1gSVS6FEj5/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [让语音转文字准确度越用越接近 99%，我是如何做 ASR 的热词替换的？](https://www.bilibili.com/video/BV1Y4oKBEEru/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [批量转录与合成双语字幕 如此简单](https://www.bilibili.com/video/BV1gtD9BhEmq/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [PR最佳字幕转录插件？haoone 上线 PR 字幕插件](https://www.bilibili.com/video/BV1kG9cBrEaz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [【免费使用】AI专业字幕软件haoone的本地中英转录，准确率 96%以上，词语对齐率 98%](https://www.bilibili.com/video/BV1n7XKBSELn/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [发布增强版达芬奇文稿匹配插件 haoone 不限匹配字数](https://www.bilibili.com/video/BV1WDAszKEjE/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
 
 ## 开源计划
 
