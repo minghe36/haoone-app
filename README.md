@@ -12,11 +12,11 @@
 
 达芬奇字幕插件：
 
-![dav截图](image/dav.png)
+<img src="image/dav.png" alt="dav截图" width="300">
 
 PR 字幕插件：
 
-![pr](image/pr.png)
+<img src="image/pr.png" alt="pr" width="300">
 
 ## haoone 软件介绍
 
