@@ -66,6 +66,18 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 ![介绍图片](https://cdn.haoai.pro/assets/haoone%20%E4%BB%8B%E7%BB%8D.png)
 
+## 本地模型支持
+
+所有模型都是经过浩叔严格评测验证，不是集成所有模型，而是集成最好或有特定用途场景的模型，会不断更新。
+
+![haoone 软件截图](image/models.png)
+
+### 模型评测视频
+
+* [锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [日语识别最准确的ASR模型是？？？锐评2026年日语 ASR 开源模型](https://www.bilibili.com/video/BV1ReLq6BEUN/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [锐评2026年英语 ASR 开源模型，哪个模型英语识别最准？](https://www.bilibili.com/video/BV1qAEn6iEgm/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+
 ## 关于软件作者
 
 我是浩叔，前阿里高级技术专家，构建 AI 时代的十倍效率剪辑工具，构建十倍效率的跨端软件开发解决方案，专攻 ASR 模型与 TTS 模型领域，你可以在 B 站上找到我：[浩叔_AI编程](https://space.bilibili.com/1055596703)
