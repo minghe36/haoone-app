@@ -8,9 +8,7 @@
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
 
-<p align="center">
-  <img src="https://cdn.haoai.pro/assets/h-4.hao.webp" alt="haoone 软件截图" width="100%">
-</p>
+![haoone 软件截图](image/index.png)
 
 ## haoone 软件介绍
 
@@ -22,9 +20,8 @@
 
 haoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。
 
-### 项目持续迭代中，欢迎给项目点个 star 支持。
+### 项目持续迭代中，欢迎给项目点个 star 支持，万分感谢。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
 
 弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。
 
