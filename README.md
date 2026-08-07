@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
-  <h1>haoone V10</h1>
+  <h1>haoone V11</h1>
   <p>新一代 AI 专业字幕软件，中英转录识别准确率97%，词语音频对齐率98%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
