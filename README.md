@@ -10,6 +10,14 @@
 
 ![haoone 软件截图](image/index.png)
 
+达芬奇字幕插件：
+
+![dav截图](image/dav.png)
+
+PR 字幕插件：
+
+![pr](image/pr.png)
+
 ## haoone 软件介绍
 
 覆盖字幕识别生成与字幕翻译工作流的所有核心需求。
