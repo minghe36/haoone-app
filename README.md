@@ -3,10 +3,12 @@
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
   <h1>haoone V11</h1>
-  <p>新一代 AI 专业字幕软件，中英转录识别准确率97%，词语音频对齐率98%</p>
+  <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。中英转录识别准确率超过 97%，词语音频对齐率 98%，说话人分割与识别准确率 96%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
+
+### 项目持续迭代中，给项目点个 star 支持，万分感谢。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
 
 ![haoone 软件截图](image/index.png)
 
@@ -27,8 +29,6 @@ PR 字幕插件：
 可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型，做到开箱即用，windows 与 mac 都可以使用。
 
 haoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。
-
-### 项目持续迭代中，欢迎给项目点个 star 支持，万分感谢。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
 
 
 弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。
