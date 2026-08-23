@@ -55,6 +55,8 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 电脑性能不好的也可以使用。可能是市面上第一个支持 mimo-v2.5-asr API 的字幕软件，mimo-v2.5-asr 1 小时转录仅需 0.5元，中英准确率可以对标 elevenlabs 的语音转文本，吊打剪映、豆包 API、qwen3-asr-flash API
 
+100+ 字幕动画，包括逐字动画、逐词动画、卡拉 OK 动画等，带有达芬奇字幕动画插件
+
 [下载软件](https://www.haoai.pro/haoone/download)
 
 ## 视频使用教程
