@@ -1,0 +1,17 @@
+{
+  "name": "haocut-doc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vitepress build content/docs",
+    "dev": "vitepress dev content/docs --host 0.0.0.0 --port ${PORT:-7474}",
+    "start": "vitepress preview content/docs --host 0.0.0.0 --port ${PORT:-7474}"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "typescript": "^5.9.2"
+  }
+}

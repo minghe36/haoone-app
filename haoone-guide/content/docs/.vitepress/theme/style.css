@@ -1,0 +1,9 @@
+.vp-doc video {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 8px;
+}
+
+.vp-doc img {
+  border-radius: 6px;
+}

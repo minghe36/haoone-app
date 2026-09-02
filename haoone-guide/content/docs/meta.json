@@ -1,0 +1,6 @@
+{
+  "title": "haoai",
+  "icon": "MyIcon",
+  "pages": ["index", "haoone"],
+  "defaultOpen": true
+}
