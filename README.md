@@ -13,7 +13,7 @@
 
 V14 正在开发中，迭代计划可以看 [issues](https://github.com/minghe36/haoone-app/issues)
 
-![haoone 软件截图](image/index.png)
+![haoone 软件截图](image/index-2.png)
 
 达芬奇字幕插件：
 
