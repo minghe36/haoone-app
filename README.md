@@ -2,14 +2,16 @@
 
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
-  <h1>haoone V11</h1>
+  <h1>haoone V13</h1>
   <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。</p>
   <p>中英转录识别准确率 97%，日语识别准确率 94%，词语音频对齐率 98%，说话人分割与识别准确率 96%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
 
-### 项目持续迭代中，给项目点个 star 支持，万分感谢。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
+### 项目迭代很快，点个 star 接收软件更新并支持项目。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
+
+V14 正在开发中，迭代计划可以看 [issues](https://github.com/minghe36/haoone-app/issues)
 
 ![haoone 软件截图](image/index.png)
 
@@ -25,20 +27,21 @@ PR 字幕插件：
 
 覆盖字幕识别生成与字幕翻译工作流的所有核心需求。
 
-剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一。
+剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，超低成本，实现超高准确率。
 
 可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型，做到开箱即用，windows 与 mac 都可以使用。
 
 haoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。
 
-
 弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。
 
-转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速。自研词语级音频对齐。
+转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速，Windows 下带有 CUDA 开箱即用加速引擎。自研词语级音频对齐。
 
 本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API...
 
 让工具适配你的工作流：达芬奇字幕插件、PR字幕插件、命令行工具、skill 封装
+
+与 codex 、workbuddy 等 AI agent 功能无缝协作
 
 多文件一键批量化操作
 
@@ -53,7 +56,6 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 可能是市面上最好的日语转录软件：日语专用模型日语识别准确率 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内即可完成转录，可配热词，支持中日双语字幕
 
-电脑性能不好的也可以使用。可能是市面上第一个支持 mimo-v2.5-asr API 的字幕软件，mimo-v2.5-asr 1 小时转录仅需 0.5元，中英准确率可以对标 elevenlabs 的语音转文本，吊打剪映、豆包 API、qwen3-asr-flash API
 
 100+ 字幕动画，包括逐字动画、逐词动画、卡拉 OK 动画等，带有达芬奇字幕动画插件
 
@@ -64,6 +66,7 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 * [haoone AI 字幕软件 V10 保姆级教程，正在实现本地版 elevenlabs的语音转文本软件](https://www.bilibili.com/video/BV1wRMg6REcz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
 * [haoone 字幕软件V11保姆级教程：这个达芬奇字幕插件有点强](https://www.bilibili.com/video/BV1FZMy6DEqb)
 * [说话人识别详细使用教程—haoone 字幕软件 V11 上新，对齐 elevenlabs 的说话人识别功能](https://www.bilibili.com/video/BV1LQKH6zEF2/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
+* [非常好用的 AI 字幕软件 haoone 发布V13 ，一大波更新：CUDA 加速、模型、AI 纠错、 AI Agent 协作、语音增强、文稿匹配、批量操作](https://www.bilibili.com/video/BV13eH46nEuC/)
 * [接入 mimo-V2.5-asr API，平替 elevenlabs 的语音转文字？最便宜且很强](https://www.bilibili.com/video/BV12bE16REdo/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
 * [达芬奇中如何以最快方式实现不同样式的双语字幕？](https://www.bilibili.com/video/BV1HnVm63EUu/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
 * [AI专业日语字幕软件上新，日语识别准确度 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内完成转录](https://www.bilibili.com/video/BV1gSVS6FEj5/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
@@ -102,7 +105,7 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 市面上绝大多数软件是基于 whisper 套壳软件，我在在使用的过程中，发现在中文转录上有非常多的问题，时间戳也没办法高精度对齐，所以花了大量时间测评市面上所有的 ASR 模型，详见我的测评报告：[锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)，2026 年了很多的模型准确度、幻觉的控制、中英混说的处理、专有名词的识别，歌曲的识别、方言的识别早已经超过 whisper 了。所以我做了 haoone，一款使用最先进的 ASR 模型的字幕软件，花大量时间构建了转录引擎与时间戳对齐算法。期望 haoone 能够帮助大家节约字幕生成与字幕校对的时间。
 
-haoone 已经迭代了 11 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。
+haoone 已经迭代了 13 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。
 
 
 ## 开源计划
