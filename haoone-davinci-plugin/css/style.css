@@ -1,0 +1,219 @@
+/* HaoCut - 暗色主题样式（精简版：头部 + 日志容器） */
+
+:root {
+    --bg: #141419;
+    --bg-panel: #1c1c24;
+    --bg-card: #232330;
+    --border: #32323f;
+    --text: #e8e8ee;
+    --text-dim: #9a9aac;
+    --accent: #ff6b35;
+    --green: #3ddc84;
+    --red: #ff5c5c;
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    background: var(--bg);
+    user-select: none;
+}
+
+/* ======================= 头部 ======================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 52px;
+    padding: 0 16px;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+.status-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--bg-card);
+    flex-shrink: 0;
+}
+
+.conn-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.conn-dot.online {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+}
+
+.conn-dot.offline {
+    background: var(--red);
+}
+
+.conn-text {
+    font-size: 11px;
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
+.info-group {
+    display: flex;
+    gap: 18px;
+    flex: 1;
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+}
+
+.info-value {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ======================= 日志容器 ======================= */
+
+.log-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    padding: 12px 16px 16px;
+}
+
+.log-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+
+.log-header h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.log-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 12px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.log-item {
+    display: flex;
+    gap: 10px;
+    padding: 1px 0;
+    word-break: break-all;
+}
+
+.log-time {
+    color: var(--text-dim);
+    flex-shrink: 0;
+}
+
+.log-message {
+    color: var(--text);
+    user-select: text;
+}
+
+.log-item.error .log-message {
+    color: var(--red);
+}
+
+.log-item.dim .log-message {
+    color: var(--text-dim);
+}
+
+/* ======================= 控件 ======================= */
+
+.btn {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: #2b2b3a;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* ======================= 滚动条 ======================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3d3d4d;
+}

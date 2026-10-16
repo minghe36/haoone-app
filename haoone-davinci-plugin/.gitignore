@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+_tmp*
+*.zip
+*.log
+.DS_Store
+/WorkflowIntegration.node
+/native/**/*.node

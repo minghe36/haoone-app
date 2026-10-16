@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+
+    <title>HaoOne</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="text/javascript" src="./renderer.js"></script>
+</head>
+
+<body>
+    <!-- ======================= 头部 ======================= -->
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-logo">HaoOne</span>
+        </div>
+
+        <div class="status-group" title="与达芬奇的 Workflow Integration 连接">
+            <span id="connDot" class="conn-dot offline"></span>
+            <span id="connText" class="conn-text">达芬奇 未连接</span>
+        </div>
+
+        <div class="status-group" title="HaoOne Tauri 应用启动的 WebSocket Server：ws://127.0.0.1:9797">
+            <span id="wsDot" class="conn-dot offline"></span>
+            <span id="wsText" class="conn-text">HaoOne 服务 未连接</span>
+        </div>
+
+        <div class="info-group">
+            <div class="info-item">
+                <span class="info-label">项目</span>
+                <span id="projectName" class="info-value">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">时间线</span>
+                <span id="timelineName" class="info-value">-</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================= 日志容器 ======================= -->
+    <main class="log-area">
+        <div class="log-header">
+            <h3>执行日志</h3>
+            <button id="btnClearLogs" class="btn btn-small">清空</button>
+        </div>
+        <ul id="logList" class="log-list">
+            <li class="log-item dim">等待日志…</li>
+        </ul>
+    </main>
+</body>
+</html>

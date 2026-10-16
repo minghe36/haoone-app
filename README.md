@@ -4,6 +4,7 @@
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
   <h1>haoone V13</h1>
   <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。</p>
+  <p>可能是市面上最强达芬奇字幕插件，字幕生成、字幕编辑、文稿匹配、一键双语、字幕动画...</p>
   <p>中英转录识别准确率 97%，日语识别准确率 94%，词语音频对齐率 98%，说话人分割与识别准确率 96%</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
@@ -13,11 +14,16 @@
 
 V14 正在开发中，迭代计划可以看 [issues](https://github.com/minghe36/haoone-app/issues)
 
-![haoone 软件截图](image/index-2.png)
+![haoone 软件截图](image/index-3.png)
 
-达芬奇字幕插件：
+自带达芬奇字幕插件，所有用户都可使用：
 
-<img src="image/dav.png" alt="dav截图" width="300">
+![haoone 软件截图](image/plugin-1.png)
+
+![haoone 软件截图](image/plugin-2.png)
+
+软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。
+
 
 PR 字幕插件：
 
@@ -32,6 +38,8 @@ PR 字幕插件：
 可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型，做到开箱即用，windows 与 mac 都可以使用。
 
 haoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。
+
+承诺 100% 隐私数据安全，绝不使用您的语音数据进行二次训练。
 
 弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。
 
@@ -86,7 +94,7 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 所有模型都是经过浩叔严格评测验证，不是集成所有模型，而是集成最好或有特定用途场景的模型，会不断更新。
 
-![本地模型](image/models.png)
+![本地模型](image/models-2.png)
 
 ### 模型评测视频
 
@@ -96,9 +104,9 @@ haoone 软件基础功能永久免费使用，增强功能一次性买断，无�
 
 ## 关于软件作者
 
-我是浩叔，前阿里高级技术专家，构建 AI 时代的十倍效率剪辑工具，构建十倍效率的跨端软件开发解决方案，专攻 ASR 模型与 TTS 模型领域，你可以在 B 站上找到我：[浩叔_AI编程](https://space.bilibili.com/1055596703)
+我是浩叔，前阿里高级技术专家，构建 AI 时代的十倍效率自动化剪辑工具，专门研究 ASR 语音转文字与 TTS 文字转语音技术，你可以在 B 站上找到我：[浩叔_AI编程](https://space.bilibili.com/1055596703)
 
-在我的B 站频道你将看到关于 ASR 模型与 TTS 模型的评测内容，跨端软件的研发经验。
+在我的B 站频道你将看到关于 ASR 模型与 TTS 模型的评测内容，软件的研发经验。
 
 ## 做 haoone 软件的思考
 
@@ -112,53 +120,49 @@ haoone 已经迭代了 13 个大版本，功能已经完善与稳定，haoone �
 
 ## 开源计划
 
-[haoone-skill 已开源](https://github.com/minghe36/haoone-skill) ：可在各类 Agent 中使用，转录视频、播客字幕，生成带有高精度时间戳的字幕，得到高准确度的文字稿
+开源的代码请看本仓库的代码。
 
-[haoone PR字幕插件 已开源](https://github.com/minghe36/haoone-pr)：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录
+haoone 达芬奇字幕插件已开源：软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。
 
-haoone 达芬奇字幕插件待开源：在 达芬奇 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录
+haoone-skill 已开源：可在各类 Agent 中使用，转录视频、播客字幕，生成带有高精度时间戳的字幕，得到高准确度的文字稿
 
-## 软件截图
+haoone PR字幕插件 已开源：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录
 
-软件主界面，专业易用的字幕编辑器，支持项目与多文件管理：
 
-![软件截图](https://cdn.haoai.pro/assets/h-1.hao.webp)
 
-本地转录：基于qwen3-asr，多语种支持，高精度词语级对齐，带有 AI 拆行、AI 智能热词替换、AI 英文专有名词修正
 
-![软件截图](https://cdn.haoai.pro/assets/h-2.hao.webp)
+## 软件部分截图
+
+
+本地转录：0 成本高精准转录
+
+![haoone 软件截图](image/s-2.png)
 
 在线转录：准确度超过剪映、豆包 API ，价格显著低于 豆包 API
 
-![软件截图](https://cdn.haoai.pro/assets/h-3.hao.webp)
+![haoone 软件截图](image/s-3.png)
 
-不限字数的文稿匹配，带有格式化文稿功能，可选择拆行是否遵循文稿，剪映文稿匹配加强版
+不限字数的文稿匹配，带有格式化文稿功能，剪映文稿匹配加强版
 
-![软件截图](https://cdn.haoai.pro/assets/h-4.hao.webp)
+![haoone 软件截图](image/s-4.png)
 
-快速编辑视图，快速找到转录错误，快速修改，支持搜索、批量替换，替换后的词自动进入热词
+全屏检查与编辑模式：
 
-![软件截图](https://cdn.haoai.pro/assets/h-5.hao.webp)
+![haoone 软件截图](image/s-1.png)
 
-文稿视图，章节总结视图
+100+ 字幕动画：
 
-![软件截图](https://cdn.haoai.pro/assets/h-6.hao.webp)
+![haoone 软件截图](image/s-6.png)
+
+文稿视图
+
+![haoone 软件截图](image/s-5.png)
 
 支持双语字幕，长文本优化
 
-![软件截图](https://cdn.haoai.pro/assets/h-7.hao.webp)
+![haoone 软件截图](image/s-7.png)
 
-最强大的 AI 热词替换功能实现
 
-![软件截图](https://cdn.haoai.pro/assets/h-8.hao.webp)
-
-一键安装达芬奇字幕插件，PR 字幕插件
-
-![软件截图](https://cdn.haoai.pro/assets/h-9.hao.webp)
-
-达芬奇字幕插件：[视频介绍](https://www.bilibili.com/video/BV1eq6uBnEXj/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
-
-PR字幕插件：[视频介绍](https://www.bilibili.com/video/BV1kG9cBrEaz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)
 
 ## 功能列表
 

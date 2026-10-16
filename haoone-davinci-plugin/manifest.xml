@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlackmagicDesign>
+    <Plugin>
+        <Id>com.haoai.haoone_dev</Id>
+        <Name>haoone_dev</Name>
+        <Version>1.0.4</Version>
+        <Description>HaoOne 字幕：时间线音频导入与字幕轨道生成</Description>
+        <FilePath>main.js</FilePath>
+    </Plugin>
+</BlackmagicDesign>

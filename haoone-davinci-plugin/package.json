@@ -1,0 +1,19 @@
+{
+  "name": "haoone-resolve-plugin",
+  "productName": "HaoOne",
+  "version": "1.0.4",
+  "description": "HaoOne - DaVinci Resolve Workflow Integration plugin for timeline audio transcription and subtitle tracks",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node scripts/build.js",
+    "build:windows": "node scripts/build.js --platform windows",
+    "build:macos": "node scripts/build.js --platform macos",
+    "test": "node --test tests/*.test.js",
+    "build:all": "pnpm build:macos && pnpm build:windows"
+  },
+  "devDependencies": {
+    "archiver": "^8.0.0",
+    "esbuild": "^0.28.2"
+  }
+}
