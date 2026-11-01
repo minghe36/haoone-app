@@ -2,17 +2,17 @@
 
 <div align="center">
   <img src="https://cdn.haoai.pro/assets/haoone_logo.png" alt="VideoCaptioner Logo" width="100">
-  <h1>haoone V13</h1>
+  <h1>haoone V14</h1>
   <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。</p>
   <p>可能是市面上最强达芬奇字幕插件，字幕生成、字幕编辑、文稿匹配、一键双语、字幕动画...</p>
-  <p>中英转录识别准确率 97%，日语识别准确率 94%，词语音频对齐率 98%，说话人分割与识别准确率 96%</p>
+  <p>中英转录识别准确率 97%，日语识别准确率 95%，词语音频对齐率 98%</p>
+  <p>日语转录针对性调优，集成最强日语模型，断句、格式、长视频、AI 纠错等针对性优化</p>
 
   [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)
 </div>
 
 ### 项目迭代很快，点个 star 接收软件更新并支持项目。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)
 
-V14 正在开发中，迭代计划可以看 [issues](https://github.com/minghe36/haoone-app/issues)
 
 ![haoone 软件截图](image/index-3.png)
 
